@@ -1,101 +1,124 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <main className="max-w-2xl mx-auto px-4 py-12 space-y-24">
+      {/* Hero Section */}
+      <section className="space-y-8 text-center">
+        <h1 className="text-2xl font-serif">
+          Not all those who wander are lost.
+        </h1>
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/images/bag.png"
+          alt="Terra device showing walking icon"
+          width={300}
+          height={300}
+          className="mx-auto"
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <p className="text-xs text-center max-w-sm mx-auto text-gray-600">
+          TERRA IS A COMPANION ON UNPLANNED WANDERING providing a link to the
+          invisible guides that compass the way we move.
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Photo Grid */}
+      <section className="grid grid-cols-2 gap-4">
+        <Image
+          src="/images/bag.png"
+          alt="Person holding device"
+          width={300}
+          height={400}
+          className="w-full object-cover"
+        />
+        <Image
+          src="/images/bag.png"
+          alt="Person walking on crosswalk"
+          width={300}
+          height={400}
+          className="w-full object-cover"
+        />
+      </section>
+
+      {/* Device Details */}
+      <section className="space-y-8">
+        <div className="text-center">
+          <input
+            type="text"
+            placeholder="2 FORUM.MA"
+            className="text-center border-b border-gray-300 focus:outline-none focus:border-gray-600 py-2"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="space-y-4">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/images/bag.png"
+            alt="Terra device front"
+            width={300}
+            height={300}
+            className="mx-auto"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/images/bag.png"
+            alt="Terra device back"
+            width={300}
+            height={300}
+            className="mx-auto"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </div>
+      </section>
+
+      {/* Second Photo Grid */}
+      <section className="grid grid-cols-2 gap-4">
+        <Image
+          src="/images/bag.png"
+          alt="Person in green coat"
+          width={300}
+          height={400}
+          className="w-full object-cover"
+        />
+        <Image
+          src="/images/bag.png"
+          alt="Close up of coat"
+          width={300}
+          height={400}
+          className="w-full object-cover"
+        />
+      </section>
+
+      {/* Icons Grid */}
+      <section className="grid grid-cols-3 gap-8 max-w-sm mx-auto">
+        {["mushroom", "flower pattern", "sun", "flower", "splash", "dots"].map(
+          (icon, i) => (
+            <div key={i} className="aspect-square bg-black rounded-full p-4">
+              <div className="w-full h-full bg-white/10 rounded-full"></div>
+            </div>
+          )
+        )}
+      </section>
+
+      {/* Colored Stones */}
+      <section className="flex justify-center gap-8">
+        {["bg-purple-400", "bg-gray-400", "bg-green-400"].map((color, i) => (
+          <div
+            key={i}
+            className={`w-16 h-16 rounded-full ${color} opacity-80`}
           />
-          Go to nextjs.org →
-        </a>
+        ))}
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center space-y-8">
+        <Image
+          src="/images/bag.png"
+          alt="Terra logo"
+          width={100}
+          height={30}
+          className="mx-auto"
+        />
+        <p className="text-xs text-gray-600 max-w-sm mx-auto">
+          © 2024 MyTerra. All rights reserved.
+        </p>
       </footer>
-    </div>
+    </main>
   );
 }
