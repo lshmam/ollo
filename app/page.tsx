@@ -17,7 +17,7 @@ export default function Page() {
           priority
         />
         <p className="text-xs text-center max-w-sm mx-auto text-gray-600">
-          TERRA IS A COMPANION ON UNPLANNED WANDERING providing a link to the
+          ollo IS A COMPANION ON UNPLANNED WANDERING providing a link to the
           invisible guides that compass the way we move.
         </p>
       </section>
